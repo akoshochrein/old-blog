@@ -28,7 +28,7 @@ exports.indexTemplate = function (options) {
     return {
         plugins: [
             new HTMLWebpackPlugin({
-                template: require('html-wepack-template'),
+                template: require('html-webpack-template'),
                 title: options.title,
                 appMountId: options.appMountId,
                 inject: false
