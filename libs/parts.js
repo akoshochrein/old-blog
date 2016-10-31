@@ -118,3 +118,37 @@ exports.setupSASS = function (paths) {
         }
     };
 };
+
+exports.fileLoader = function (paths) {
+    return {
+        module: {
+            loaders: [
+                {
+                    test: /\.(jpg|png)$/,
+                    loaders: [
+                        'file?name=[path][name].[hash].[ext]',
+                        'image-webpack?bypassOnDebug&optimizationLevel=10&interlaced=false'
+                    ],
+                    include: paths
+                }
+            ]
+        }
+    };
+};
+
+exports.svgLoader = function (paths) {
+    return {
+        module: {
+            loaders: [
+                {
+                    test: /\.svg$/,
+                    loaders: [
+                        'file',
+                        'svgo-loader'
+                    ],
+                    include: paths
+                }
+            ]
+        }
+    };
+};

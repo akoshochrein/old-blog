@@ -9,7 +9,9 @@ const PATHS = {
     style: [
         path.join(__dirname, 'src', 'styles', 'main.scss')
     ],
-    build: path.join(__dirname, 'build')
+    build: path.join(__dirname, 'build'),
+    img: path.join(__dirname, 'src', 'static', 'img'),
+    svg: path.join(__dirname, 'src', 'static', 'svg')
 };
 
 const common = {
@@ -43,6 +45,7 @@ switch (process.env.npm_lifecycle_event) {
             },
             parts.clean(PATHS.build),
             parts.setFreeVariable('process.env.NODE_ENV', 'production'),
+            parts.fileLoader(PATHS.img), parts.svgLoader(PATHS.svg),
             parts.extractBundle({name: 'vendor', entries: ['react']}),
             parts.minify(),
             parts.extractCSS(PATHS.style),
@@ -53,6 +56,8 @@ switch (process.env.npm_lifecycle_event) {
         config = merge(
             common,
             { devtool: 'eval-source-map' },
+            parts.fileLoader(PATHS.img),
+            parts.svgLoader(PATHS.svg),
             parts.setupSASS(PATHS.style),
             parts.devServer({
                 host: process.env.HOST,
