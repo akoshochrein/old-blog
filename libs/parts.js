@@ -23,20 +23,6 @@ exports.devServer = function (options) {
     }
 };
 
-exports.setupCSS = function (paths) {
-    return {
-        module: {
-            loaders: [
-                {
-                    test: /\.css$/,
-                    loaders: ['style', 'css'],
-                    include: paths
-                }
-            ]
-        }
-    }
-};
-
 exports.minify = function () {
     return {
         plugins: [
@@ -96,8 +82,8 @@ exports.extractCSS = function (paths) {
         module: {
             loaders: [
                 {
-                    test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css'),
+                    test: /\.scss$/,
+                    loader: ExtractTextPlugin.extract(['css', 'sass']),
                     include: paths
                 }
             ]
@@ -116,5 +102,19 @@ exports.purifyCSS = function (paths) {
                 paths: paths
             })
         ]
+    };
+};
+
+exports.setupSASS = function (paths) {
+    return {
+        module: {
+            loaders: [
+                {
+                    test: /\.scss$/,
+                    loaders: ['style', 'css', 'sass'],
+                    include: paths
+                }
+            ]
+        }
     };
 };

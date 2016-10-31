@@ -7,8 +7,7 @@ const parts = require('./libs/parts.js');
 const PATHS = {
     app: path.join(__dirname, 'src'),
     style: [
-        path.join(__dirname, 'node_modules', 'purecss'),
-        path.join(__dirname, 'src', 'styles', 'main.css')
+        path.join(__dirname, 'src', 'styles', 'main.scss')
     ],
     build: path.join(__dirname, 'build')
 };
@@ -30,12 +29,14 @@ const common = {
 var config;
 switch (process.env.npm_lifecycle_event) {
     case 'build':
+    case 'stats':
         config = merge(
             common,
             {
                 devtool: 'source-map',
                 output: {
                     path: PATHS.build,
+                    publicPath: '/blog/',
                     filename: '[name].[chunkhash].js',
                     chunkFilename: '[chunkhash].js'
                 }
@@ -52,7 +53,7 @@ switch (process.env.npm_lifecycle_event) {
         config = merge(
             common,
             { devtool: 'eval-source-map' },
-            parts.setupCSS(PATHS.style),
+            parts.setupSASS(PATHS.style),
             parts.devServer({
                 host: process.env.HOST,
                 port: process.env.PORT
