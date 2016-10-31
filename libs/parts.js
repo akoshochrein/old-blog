@@ -37,6 +37,34 @@ exports.indexTemplate = function (options) {
     };
 };
 
+exports.loadJSX = function (include) {
+    return {
+        module: {
+            loaders: [
+                {
+                    test: /\.(js|jsx)$/,
+                    loaders: ['babel?cacheDirectory'],
+                    include: include
+                }
+            ]
+        }
+    };
+};
+
+exports.lintJSX = function (include) {
+    return {
+        module: {
+            preLoaders: [
+                {
+                    test: /\.(js|jsx)$/,
+                    loaders: ['eslint'],
+                    include: include
+                }
+            ]
+        }
+    }
+};
+
 exports.minify = function () {
     return {
         plugins: [

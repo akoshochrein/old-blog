@@ -22,9 +22,14 @@ const common = merge(
         output: {
             path: PATHS.build,
             filename: '[name].js'
+        },
+        resolve: {
+            extensions: ['', '.js', '.jsx']
         }
     },
-    parts.indexTemplate({ title: 'Blog', appMountId: 'app' })
+    parts.indexTemplate({ title: 'Blog', appMountId: 'app' }),
+    parts.loadJSX(PATHS.app),
+    parts.lintJSX(PATHS.app)
 );
 
 var config;
@@ -45,7 +50,7 @@ switch (process.env.npm_lifecycle_event) {
             parts.clean(PATHS.build),
             parts.setFreeVariable('process.env.NODE_ENV', 'production'),
             parts.fileLoader(PATHS.img), parts.svgLoader(PATHS.svg),
-            parts.extractBundle({name: 'vendor', entries: ['react']}),
+            parts.extractBundle({ name: 'vendor', entries: ['react', 'react-dom'] }),
             parts.minify(),
             parts.extractCSS(PATHS.style),
             parts.purifyCSS([PATHS.app])
