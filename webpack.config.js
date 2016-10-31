@@ -1,5 +1,4 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const validate = require('webpack-validator');
 const parts = require('./libs/parts.js');
@@ -14,19 +13,19 @@ const PATHS = {
     svg: path.join(__dirname, 'src', 'static', 'svg')
 };
 
-const common = {
-    entry: {
-        style: PATHS.style,
-        app: PATHS.app
+const common = merge(
+    {
+        entry: {
+            style: PATHS.style,
+            app: PATHS.app
+        },
+        output: {
+            path: PATHS.build,
+            filename: '[name].js'
+        }
     },
-    output: {
-        path: PATHS.build,
-        filename: '[name].js'
-    },
-    plugins: [
-        new HTMLWebpackPlugin({title: 'react blog'})
-    ]
-};
+    parts.indexTemplate({ title: 'Blog', appMountId: 'app' })
+);
 
 var config;
 switch (process.env.npm_lifecycle_event) {

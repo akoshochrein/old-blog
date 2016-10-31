@@ -2,6 +2,7 @@ const webpack = require('webpack');
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack-plugin');
 
 
@@ -21,6 +22,19 @@ exports.devServer = function (options) {
             })
         ]
     }
+};
+
+exports.indexTemplate = function (options) {
+    return {
+        plugins: [
+            new HTMLWebpackPlugin({
+                template: require('html-wepack-template'),
+                title: options.title,
+                appMountId: options.appMountId,
+                inject: false
+            })
+        ]
+    };
 };
 
 exports.minify = function () {
