@@ -1,5 +1,44 @@
-$bg-color: cornsilk;
+@import "./fonts";
+
+// colors
+$bg-color: #fffaf5;
+
 
 body {
-    background: url('../static/img/orange.jpg');
+    background: $bg-color;
+    font-family: $ptSerifRegular;
+}
+
+h1 {
+    color: $bg-color;
+    font-size: 55px;
+}
+
+h2 {
+    color: $bg-color;
+    font-family: $ptSerifItalic;
+}
+
+.application-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 21px;
+    margin-top: 21px;
+}
+
+.container {
+    font-size: 21px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 34px;
+    width: 987px;
+}
+
+.title-container {
+    background-position: 50% 50%;
+    text-align: center;
+    height: 300px;
+    vertical-align: middle;
+    line-height: 55px;
+    padding-top: 21px;
 }

@@ -194,3 +194,17 @@ exports.svgLoader = function (paths) {
         }
     };
 };
+
+exports.fontLoader = function (include) {
+    return {
+        module: {
+            loaders: [
+                {
+                    test: /\.ttf$/,
+                    loader: 'file?name=[hash].[ext]',
+                    include: include
+                }
+            ]
+        }
+    };
+};
