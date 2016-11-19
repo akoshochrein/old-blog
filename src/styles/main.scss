@@ -11,12 +11,16 @@ body {
 
 h1 {
     color: $bg-color;
-    font-size: 55px;
+    font-size: 89px;
+    font-weight: normal;
+    font-family: $cormorantGaramondRegular;
 }
 
 h2 {
     color: $bg-color;
-    font-family: $ptSerifItalic;
+    font-size: 34px;
+    font-weight: normal;
+    font-family: $cormorantGaramondRegular;
 }
 
 .application-wrapper {
@@ -40,5 +44,4 @@ h2 {
     height: 300px;
     vertical-align: middle;
     line-height: 55px;
-    padding-top: 21px;
 }
