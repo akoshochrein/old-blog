@@ -1,0 +1,33 @@
+@font-face {
+  font-family: VollkornRegular;
+  src: url(/blog/e1d944914cf2c86a31244dada1ef9d0c.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: VollkornBold;
+  src: url(/blog/a7ed957962fb0d24667544b26c8bb125.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: VollkornItalic;
+  src: url(/blog/0541820d17ec3ac6ec8b6b8803ca4cb2.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: VollkornBoldItalic;
+  src: url(/blog/7fb0386b732bf2e4cb91dedae8da6840.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+body {
+  background: #fff8dc;
+  font-family: VollkornRegular;
+}
+/*# sourceMappingURL=style.cf63411767048638e64d.css.map*/
