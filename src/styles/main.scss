@@ -1,7 +1,7 @@
 @import "./fonts";
 
 // colors
-$bg-color: #fffaf5;
+$bg-color: #fffdfe;
 
 
 body {
@@ -44,4 +44,9 @@ h2 {
     height: 300px;
     vertical-align: middle;
     line-height: 55px;
+}
+
+.showcase-canvas {
+    margin: auto;
+    display: block;
 }
