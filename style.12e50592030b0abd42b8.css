@@ -1,55 +1,55 @@
 @font-face {
   font-family: PTSerifRegular;
-  src: url(/blog/ae585d91ff895849f607a9bfbd439c6f.ttf) format("truetype");
+  src: url(/ae585d91ff895849f607a9bfbd439c6f.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: PTSerifBold;
-  src: url(/blog/4b61d02c1a6ed6956666ffb0fed35eca.ttf) format("truetype");
+  src: url(/4b61d02c1a6ed6956666ffb0fed35eca.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: PTSerifItalic;
-  src: url(/blog/6d67303b40f64589d7c190a3d1a1ba01.ttf) format("truetype");
+  src: url(/6d67303b40f64589d7c190a3d1a1ba01.ttf) format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: PTSerifBoldItalic;
-  src: url(/blog/4bb4d54a56d97e1d564ae9a5384199a9.ttf) format("truetype");
+  src: url(/4bb4d54a56d97e1d564ae9a5384199a9.ttf) format("truetype");
   font-weight: 700;
   font-style: italic;
 }
 
 @font-face {
   font-family: CormorantGaramondRegular;
-  src: url(/blog/079144e27666229fecf05282067d1533.ttf) format("truetype");
+  src: url(/079144e27666229fecf05282067d1533.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: CormorantGaramondBold;
-  src: url(/blog/1d1dddf77a21740710cdb4843cb51a5a.ttf) format("truetype");
+  src: url(/1d1dddf77a21740710cdb4843cb51a5a.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: CormorantGaramondItalic;
-  src: url(/blog/61c5b59b6c5a62916b769c2fc13916e9.ttf) format("truetype");
+  src: url(/61c5b59b6c5a62916b769c2fc13916e9.ttf) format("truetype");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: CormorantGaramondBoldItalic;
-  src: url(/blog/aa806796adcaec9e5f7bbd26016b0264.ttf) format("truetype");
+  src: url(/aa806796adcaec9e5f7bbd26016b0264.ttf) format("truetype");
   font-weight: 700;
   font-style: italic;
 }
@@ -100,4 +100,4 @@ h2 {
   margin: auto;
   display: block;
 }
-/*# sourceMappingURL=style.af3f180b87ae378eeb49.css.map*/
+/*# sourceMappingURL=style.12e50592030b0abd42b8.css.map*/
