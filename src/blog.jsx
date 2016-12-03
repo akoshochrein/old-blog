@@ -5,7 +5,7 @@ import ArticleTitle from './components/title';
 
 var orangeFull = require('./static/img/orange-full.jpg');
 
-export default class App extends React.Component {
+export default class Blog extends React.Component {
     render () {
         return (
             <div className="application-wrapper">
