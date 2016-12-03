@@ -137,14 +137,38 @@ a,a:hover,a:link,a:visited {
   top: -10px;
   background-position: 50% 50%;
   transition: height .2s,opacity .5s,top .5s;
+  font-family: CormorantGaramondRegular;
+  font-size: 40px;
+  text-transform: lowercase;
+  letter-spacing: 4px;
 }
 
 .welcome-menu-item:hover {
   height: 200px;
 }
 
+.welcome-menu-item:hover .menu-item-name:after {
+  width: 100%;
+}
+
+.welcome-menu-item .menu-item-name {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.welcome-menu-item .menu-item-name:after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  height: 1px;
+  background: #fffdfe;
+  width: 0;
+  transition: width .2s;
+}
+
 .loaded {
   opacity: 1;
   top: 0;
 }
-/*# sourceMappingURL=style.913e0cf63eff545f4911.css.map*/
+/*# sourceMappingURL=style.3ee46c277524a5fc0ba9.css.map*/
