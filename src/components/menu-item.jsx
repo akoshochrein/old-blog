@@ -30,7 +30,7 @@ export default class MenuItem extends React.Component {
         return (
             <Link to={this.props.linkTo}>
                 <div ref="wmi" className={this.getClassName()} style={customStyle}>
-                    {this.props.name}
+                    <span className="menu-item-name">{this.props.name}</span>
                 </div>
             </Link>
         );

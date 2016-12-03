@@ -87,13 +87,37 @@ a:link { color: $bg-color; }
 
     transition: .2s height, .5s opacity, .5s top;
 
+    font-family: CormorantGaramondRegular;
+    font-size: 40px;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+
     &:hover {
         height: 200px;
+        .menu-item-name::after {
+            width: 100%;
+        }
+    }
+
+    .menu-item-name {
+        position: relative;
+        padding-bottom: 2px;
+    }
+
+    .menu-item-name::after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0;
+        height: 1px;
+        background: $bg-color;
+        width: 0;
+        transition: .2s width;
     }
 }
 
 .loaded {
     opacity: 1;
-    top: 0px;
+    top: 0;
 }
 
