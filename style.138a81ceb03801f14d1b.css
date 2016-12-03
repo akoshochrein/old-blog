@@ -60,17 +60,21 @@ body {
 }
 
 h1 {
-  font-size: 89px;
-}
-
-h1,h2 {
   color: #fffdfe;
+  font-size: 89px;
   font-weight: 400;
   font-family: CormorantGaramondRegular;
 }
 
+h1.welcome {
+  color: #100e0f;
+}
+
 h2 {
+  color: #fffdfe;
   font-size: 34px;
+  font-weight: 400;
+  font-family: CormorantGaramondRegular;
 }
 
 .application-wrapper {
@@ -100,4 +104,4 @@ h2 {
   margin: auto;
   display: block;
 }
-/*# sourceMappingURL=style.12e50592030b0abd42b8.css.map*/
+/*# sourceMappingURL=style.138a81ceb03801f14d1b.css.map*/
