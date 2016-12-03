@@ -104,4 +104,32 @@ h2 {
   margin: auto;
   display: block;
 }
-/*# sourceMappingURL=style.d35b61bb1513191f76cb.css.map*/
+
+.welcome-menu {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+a,a:hover,a:link,a:visited {
+  color: #fffdfe;
+}
+
+.welcome-menu-item {
+  display: inline-block;
+  width: 300px;
+  height: 180px;
+  text-align: center;
+  margin: 0 12px;
+  padding-top: 100px;
+  background-position: 50% 50%;
+  transition: height .2s;
+}
+
+.welcome-menu-item:hover {
+  height: 200px;
+}
+/*# sourceMappingURL=style.94be748ab9438b1d393f.css.map*/
