@@ -132,11 +132,19 @@ a,a:hover,a:link,a:visited {
   text-align: center;
   margin: 12px;
   padding-top: 100px;
+  opacity: 0;
+  position: relative;
+  top: -10px;
   background-position: 50% 50%;
-  transition: height .2s;
+  transition: height .2s,opacity .5s,top .5s;
 }
 
 .welcome-menu-item:hover {
   height: 200px;
 }
-/*# sourceMappingURL=style.ef7641eba7f036615364.css.map*/
+
+.loaded {
+  opacity: 1;
+  top: 0;
+}
+/*# sourceMappingURL=style.913e0cf63eff545f4911.css.map*/
