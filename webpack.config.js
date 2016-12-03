@@ -43,7 +43,7 @@ switch (process.env.npm_lifecycle_event) {
                 devtool: 'source-map',
                 output: {
                     path: PATHS.build,
-                    publicPath: '/',
+                    publicPath: '/blog/',
                     filename: '[name].[chunkhash].js',
                     chunkFilename: '[chunkhash].js'
                 }
