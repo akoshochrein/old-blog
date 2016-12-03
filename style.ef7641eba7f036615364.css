@@ -66,8 +66,14 @@ h1 {
   font-family: CormorantGaramondRegular;
 }
 
-h1.welcome {
+h1.welcome,h2.welcome {
+  padding-left: 30px;
   color: #100e0f;
+  margin: 0;
+}
+
+h2.welcome {
+  margin-bottom: 36px;
 }
 
 h2 {
@@ -108,6 +114,7 @@ h2 {
 .welcome-menu {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 a {
@@ -123,7 +130,7 @@ a,a:hover,a:link,a:visited {
   width: 300px;
   height: 180px;
   text-align: center;
-  margin: 0 12px;
+  margin: 12px;
   padding-top: 100px;
   background-position: 50% 50%;
   transition: height .2s;
@@ -132,4 +139,4 @@ a,a:hover,a:link,a:visited {
 .welcome-menu-item:hover {
   height: 200px;
 }
-/*# sourceMappingURL=style.94be748ab9438b1d393f.css.map*/
+/*# sourceMappingURL=style.ef7641eba7f036615364.css.map*/
