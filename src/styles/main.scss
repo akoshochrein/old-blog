@@ -79,12 +79,21 @@ a:link { color: $bg-color; }
     text-align: center;
     margin: 12px 12px;
     padding-top: 100px;
+    opacity: 0;
+    position: relative;
+    top: -10px;
 
     background-position: 50% 50%;
 
-    transition: .2s height;
+    transition: .2s height, .5s opacity, .5s top;
 
     &:hover {
         height: 200px;
     }
 }
+
+.loaded {
+    opacity: 1;
+    top: 0px;
+}
+

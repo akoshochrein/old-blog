@@ -12,8 +12,8 @@ export default class Welcome extends React.Component {
                 <h1 className="welcome">akos hochrein</h1>
                 <h2 className="welcome">software engineer</h2>
                 <div className="welcome-menu">
-                    <MenuItem linkTo="showcase" name="Showcase" backgroundImage={tree} />
-                    <MenuItem linkTo="blog/test" name="Blog" backgroundImage={orange} />
+                    <MenuItem ref="menuShowcase" linkTo="showcase" name="Showcase" backgroundImage={tree} delay="200" />
+                    <MenuItem ref="menuBlog" linkTo="blog/test" name="Blog" backgroundImage={orange} delay="400" />
                 </div>
             </div>
         );
