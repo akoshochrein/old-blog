@@ -16,8 +16,14 @@ h1 {
     font-family: $cormorantGaramondRegular;
 }
 
-h1.welcome {
+h1.welcome, h2.welcome {
+    padding-left: 30px;
     color: #100e0f;
+    margin: 0;
+}
+
+h2.welcome {
+    margin-bottom: 36px;
 }
 
 h2 {
@@ -58,8 +64,8 @@ h2 {
 .welcome-menu {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-
 
 a { color: $bg-color; text-decoration: none; }
 a:hover { color: $bg-color; }
@@ -71,11 +77,10 @@ a:link { color: $bg-color; }
     width: 300px;
     height: 180px;
     text-align: center;
-    margin: 0 12px;
+    margin: 12px 12px;
     padding-top: 100px;
 
     background-position: 50% 50%;
-
 
     transition: .2s height;
 
