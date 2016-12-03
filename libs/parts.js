@@ -31,7 +31,8 @@ exports.indexTemplate = function (options) {
                 template: require('html-webpack-template'),
                 title: options.title,
                 appMountId: options.appMountId,
-                inject: false
+                inject: false,
+                chunksSortMode: 'dependency'
             })
         ]
     };
@@ -103,7 +104,8 @@ exports.extractBundle = function (options) {
         entry: entry,
         plugins: [
             new webpack.optimize.CommonsChunkPlugin({
-                names: [options.name, 'manifest']
+                names: [options.name, 'manifest'],
+                minChunks: 2
             })
         ]
     };
