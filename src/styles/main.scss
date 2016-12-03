@@ -54,3 +54,32 @@ h2 {
     margin: auto;
     display: block;
 }
+
+.welcome-menu {
+    display: flex;
+    justify-content: center;
+}
+
+
+a { color: $bg-color; text-decoration: none; }
+a:hover { color: $bg-color; }
+a:visited { color: $bg-color; }
+a:link { color: $bg-color; }
+
+.welcome-menu-item {
+    display: inline-block;
+    width: 300px;
+    height: 180px;
+    text-align: center;
+    margin: 0 12px;
+    padding-top: 100px;
+
+    background-position: 50% 50%;
+
+
+    transition: .2s height;
+
+    &:hover {
+        height: 200px;
+    }
+}
